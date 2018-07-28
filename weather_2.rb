@@ -1,5 +1,5 @@
 #https://learn.skillcrush.com/module-18/step-2-make-your-weather-app-a-forecasting-weather-app/
-#https://darksky.net/dev/docs
+#https://darksky.net/dev/docs try?
 #https://github.com/darkskyapp/forecast-ruby
 
 require 'barometer'
@@ -30,6 +30,7 @@ else
 end
 
 puts forecast
+puts forecast.inspect
 #puts weather.inspect
 #puts condition.inspect
 #puts weather.methods

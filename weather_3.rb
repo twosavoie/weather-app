@@ -5,23 +5,47 @@
 #see 5 for other studen's work
 require 'barometer'
 
-barometer = Barometer.new('Chicago')
+puts "Where are you (city, zipcode, landmark, or Woe ID)"
+location = gets.chomp
+
+barometer = Barometer.new(location)
 weather = barometer.measure
-puts weather.methods
+#puts weather.methods
 puts weather.forecast
 puts weather.forecast.inspect
 puts weather.current.temperature.f.inspect
+#end gives object id & temp
 
+#doesn't do anything, doesn't return error
 def get_location(location)
   Barometer.new(location).measure
 end
 
-weather = get_location('Chicago')
+weather = get_location(location)
 
 weather.forecast.each do |forecast|
  puts forecast.starts_at.month.to_s + '/' + forecast.starts_at.day.to_s + ' is going to be ' + forecast.icon + ' with a low of ' + forecast.low.f.to_s + ' and a high of ' + forecast.high.f.to_s
 end
 
+#doesn't do anything, doesn't return error
+def get_location_weather(location)
+  Barometer.new(location).measure
+end
+
+weather = get_location_weather('Chicago')
+tomorrow = Time.now.strftime('%d').to_i + 1
+
+weather.forecast.each do |forecast|
+  day = forecast.starts_at.day
+
+  if day == tomorrow
+    dayName = 'Tomorrow'
+  else
+    dayName = forecast.starts_at.strftime('%A') #the day of the week
+  end
+
+  puts dayName = ' is going to be' + forecast.icon + ' with a low of' + forecast.low.f.to_s + ' and a high of ' + forecast.high.f.to_s
+end
 
 
 #these just do not work.

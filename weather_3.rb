@@ -1,3 +1,8 @@
+#https://www.wunderground.com maybe I can pull something from this site to get the forecast
+#https://rubygems.org/gems/weather-forecasts maybe this would be good? https://github.com/alakra/weather-forecasts
+#include the previous code to ask for a location
+#http://ravi4rubyonrails.blogspot.com/2011/08/usage-of-barometer-gem.html this might also be helpful
+#see 5 for other studen's work
 require 'barometer'
 
 barometer = Barometer.new('Chicago')

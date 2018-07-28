@@ -1,0 +1,57 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
+    barometer (0.9.7)
+      addressable
+      choc_mool
+      httpclient
+      nokogiri
+      nori
+      tzinfo (>= 0.3.14)
+      virtus (>= 1.0.0)
+    barometer-forecast_io (0.0.1)
+      barometer (~> 0.9.3)
+    barometer-noaa (0.0.2)
+      barometer (~> 0.9.7)
+    barometer-yahoo (0.0.1)
+      barometer (~> 0.9.7)
+    choc_mool (0.0.1)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
+    equalizer (0.0.11)
+    httpclient (2.8.3)
+    ice_nine (0.11.2)
+    mini_portile2 (2.3.0)
+    nokogiri (1.8.4)
+      mini_portile2 (~> 2.3.0)
+    nori (2.6.0)
+    public_suffix (3.0.2)
+    thread_safe (0.3.6)
+    tzinfo (1.2.5)
+      thread_safe (~> 0.1)
+    virtus (1.0.5)
+      axiom-types (~> 0.1)
+      coercible (~> 1.0)
+      descendants_tracker (~> 0.0, >= 0.0.3)
+      equalizer (~> 0.0, >= 0.0.9)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  barometer (~> 0.9.7)
+  barometer-forecast_io (~> 0.0.1)
+  barometer-noaa (~> 0.0.2)
+  barometer-yahoo (~> 0.0.1)
+  nokogiri (~> 1.8, >= 1.8.4)
+
+BUNDLED WITH
+   1.16.3
